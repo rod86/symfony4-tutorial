@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block body %}
+    <p>ID {{ id }}</p>
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.text }}</p>
+    <p>{{ 560|price }}</p>
+    <br>
+    <a href="{{ path('blog_index') }}">back</a>
+
+    {{ dump(app.session) }}
+{% endblock %}
